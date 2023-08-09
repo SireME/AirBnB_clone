@@ -13,14 +13,25 @@ class BaseModel:
     """
     super class for the airbnb project with common classes
     """
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """
         Initialise attributes of the basemodules
             id, created_at and updated_at
         """
-        self.id = str(uuid.uuid4())
-        self.created_at = dt.datetime.now()
-        self.updated_at = dt.datetime.now()
+        if len(kwargs) > 0:  # instantiate model
+            for key, value in kwargs.items():
+                if key == "__class__":
+                    continue
+                if key == "created_at" or key == "updated_at":
+                    tfmt = "%Y-%m-%dT%H:%M:%S.%f"
+                    date_time = dt.datetime.strptime(value, tfmt)
+                    setattr(self, key, date_time)
+                else:
+                    setattr(self, key, value)
+        else:  # instantiate model by default
+            self.id = str(uuid.uuid4())
+            self.created_at = dt.datetime.now()
+            self.updated_at = dt.datetime.now()
 
     def __str__(self):
         """
