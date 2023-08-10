@@ -39,7 +39,7 @@ class BaseModel:
         """
         print properties of class
         """
-        return f"[{__class__.__name__}] ({self.id}) {self.__dict__}"
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
         """
@@ -53,12 +53,12 @@ class BaseModel:
         """
         return dictionary representation of class
         """
-        dic = self.__dict__
+        dic = self.__dict__.copy()
         newdic = {}
         for key, value in dic.items():  # only attributes set are added to dict
             if value:
                 newdic[key] = value
-        newdic["__class__"] = __class__.__name__   # add classname to dict
+        newdic["__class__"] = self.__class__.__name__   # add classname to dict
         if 'created_at' in newdic:
             # replace created at value with iso formated string representation
             newdic['created_at'] = newdic['created_at'].isoformat(sep="T")

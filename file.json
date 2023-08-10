@@ -1,0 +1,21 @@
+{
+    "User.f8b41609-2927-4dff-a5e6-68a29eb0638e": {
+        "id": "f8b41609-2927-4dff-a5e6-68a29eb0638e",
+        "created_at": "2023-08-10T23:46:35.948899",
+        "updated_at": "2023-08-10T23:46:35.948915",
+        "first_name": "Betty",
+        "last_name": "Bar",
+        "email": "airbnb@mail.com",
+        "password": "root",
+        "__class__": "User"
+    },
+    "User.afc5409c-989b-47e8-88a5-01f22e38bb6f": {
+        "id": "afc5409c-989b-47e8-88a5-01f22e38bb6f",
+        "created_at": "2023-08-10T23:46:35.949226",
+        "updated_at": "2023-08-10T23:46:35.949235",
+        "first_name": "John",
+        "email": "airbnb2@mail.com",
+        "password": "root",
+        "__class__": "User"
+    }
+}
