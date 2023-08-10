@@ -1,21 +1,44 @@
 {
-    "User.f8b41609-2927-4dff-a5e6-68a29eb0638e": {
-        "id": "f8b41609-2927-4dff-a5e6-68a29eb0638e",
-        "created_at": "2023-08-10T23:46:35.948899",
-        "updated_at": "2023-08-10T23:46:35.948915",
-        "first_name": "Betty",
-        "last_name": "Bar",
-        "email": "airbnb@mail.com",
-        "password": "root",
+    "User.6ad9baee-1125-4463-80f5-eb3c133f7246": {
+        "id": "6ad9baee-1125-4463-80f5-eb3c133f7246",
+        "created_at": "2023-08-11T00:47:17.431802",
+        "updated_at": "2023-08-11T00:47:17.431820",
         "__class__": "User"
     },
-    "User.afc5409c-989b-47e8-88a5-01f22e38bb6f": {
-        "id": "afc5409c-989b-47e8-88a5-01f22e38bb6f",
-        "created_at": "2023-08-10T23:46:35.949226",
-        "updated_at": "2023-08-10T23:46:35.949235",
-        "first_name": "John",
-        "email": "airbnb2@mail.com",
-        "password": "root",
-        "__class__": "User"
+    "State.fe4ca3d7-e8d9-4231-bb6c-6dfd3e8f673f": {
+        "id": "fe4ca3d7-e8d9-4231-bb6c-6dfd3e8f673f",
+        "created_at": "2023-08-11T00:47:36.580124",
+        "updated_at": "2023-08-11T00:47:36.580142",
+        "__class__": "State"
+    },
+    "City.78310d1d-37da-430d-80fa-eb4d9b0da42f": {
+        "id": "78310d1d-37da-430d-80fa-eb4d9b0da42f",
+        "created_at": "2023-08-11T00:47:44.068805",
+        "updated_at": "2023-08-11T00:47:44.068816",
+        "__class__": "City"
+    },
+    "Amenity.2eae7d62-5cfa-41d9-a992-1c805cb3f16a": {
+        "id": "2eae7d62-5cfa-41d9-a992-1c805cb3f16a",
+        "created_at": "2023-08-11T00:47:52.349921",
+        "updated_at": "2023-08-11T00:47:52.349944",
+        "__class__": "Amenity"
+    },
+    "Place.32b89585-1298-4c5e-a763-9b46cb9a0dec": {
+        "id": "32b89585-1298-4c5e-a763-9b46cb9a0dec",
+        "created_at": "2023-08-11T00:48:03.212877",
+        "updated_at": "2023-08-11T00:48:03.212892",
+        "__class__": "Place"
+    },
+    "Review.6774fe0f-547c-42ae-8de4-25f5321cdddc": {
+        "id": "6774fe0f-547c-42ae-8de4-25f5321cdddc",
+        "created_at": "2023-08-11T00:48:17.423973",
+        "updated_at": "2023-08-11T00:48:17.423990",
+        "__class__": "Review"
+    },
+    "Review.cf2fa183-d983-4911-a519-bd7c17dadc54": {
+        "id": "cf2fa183-d983-4911-a519-bd7c17dadc54",
+        "created_at": "2023-08-11T00:52:13.165288",
+        "updated_at": "2023-08-11T00:52:13.165306",
+        "__class__": "Review"
     }
 }
