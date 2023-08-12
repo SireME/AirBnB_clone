@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""Module for testing classes"""
+"""Module for test classes"""
 import inspect
 import pep8
-import unittest
 
 
-class TestClassDocumentation(unittest.TestCase):
-    """Class that allows us to test multiple classes"""
+class TestClassDocumentation():
+    """Class that allow us to test multiples classes"""
 
     def __init__(self, tests, _class):
         """Constructor"""
@@ -17,7 +16,7 @@ class TestClassDocumentation(unittest.TestCase):
         self.functions = inspect.getmembers(self.name, inspect.isfunction)
 
     def documentation(self):
-        """Test documentation of the module, class, and methods"""
+        """Test documentation of the module, class and methods"""
         with self.tests.subTest(msg='Testing methods'):
             for f in self.functions:
                 with self.tests.subTest(msg='Documentation method {}'
