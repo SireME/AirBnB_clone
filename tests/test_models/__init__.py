@@ -7,4 +7,3 @@ file_storage_instance = FileStorage()
 
 # Reload data into the storage instance
 file_storage_instance.reload()
-
