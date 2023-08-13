@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module for testing the Place class"""
+"""
+    The aim of this lmodule is to test for Place
+    class functionality
+"""
 import unittest
 import json
 import pep8
@@ -56,4 +59,3 @@ class TestPlace(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
