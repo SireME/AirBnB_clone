@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module for testing the Review class"""
+"""
+  This Modul is to ensure that the Review class
+  works accordingly
+"""
 import unittest
 import json
 import pep8
@@ -48,4 +51,3 @@ class TestReview(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
