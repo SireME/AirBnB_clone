@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for test Amenity class"""
+"""Module for testing the Amenity class"""
 import unittest
 import json
 import pep8
@@ -10,33 +10,34 @@ from models.base_model import BaseModel
 
 
 class TestAmenity(unittest.TestCase):
-    """Test State class implementation"""
-    def test_doc_module(self):
-        """Module documentation"""
+    """Test the implementation of the Amenity class"""
+    def test_module_documentation(self):
+        """Test module documentation"""
         doc = Amenity.__doc__
         self.assertGreater(len(doc), 1)
 
     def test_pep8_conformance_amenity(self):
-        """Test that models/amenity.py conforms to PEP8."""
+        """Test PEP8 conformance for models/amenity.py"""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/amenity.py'])
         self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+                         "Detected code style errors (and warnings).")
 
     def test_pep8_conformance_test_amenity(self):
-        """Test that tests/test_models/test_state.py conforms to PEP8."""
+        """Test PEP8 conformance for tests/test_models/test_amenity.py"""
         pep8style = pep8.StyleGuide(quiet=True)
-        res = pep8style.check_files(['tests/test_models/test_amenity.py'])
+        files_to_check = ['tests/test_models/test_amenity.py']
+        res = pep8style.check_files(files_to_check)
         self.assertEqual(res.total_errors, 0,
-                         "Found code style errors (and warnings).")
+                         "Detected code style errors (and warnings) in files: {}".format(files_to_check))
 
-    def test_doc_constructor(self):
-        """Constructor documentation"""
+    def test_constructor_documentation(self):
+        """Test constructor documentation"""
         doc = Amenity.__init__.__doc__
         self.assertGreater(len(doc), 1)
 
-    def test_class(self):
-        """Validate the types of the attributes an class"""
+    def test_class_attributes(self):
+        """Validate the types of the class attributes"""
         with self.subTest(msg='Inheritance'):
             self.assertTrue(issubclass(Amenity, BaseModel))
 
