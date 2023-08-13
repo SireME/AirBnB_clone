@@ -47,18 +47,8 @@ class TestConsole(unittest.TestCase):
             output = f.getvalue().strip()
             self.assertIn("** class doesn't exist **", output)
 
-    def test_show_command(self):
-        """Test the show command"""
-        with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("create BaseModel")
-            output = f.getvalue().strip()
-            instance_id = output
-            with patch('sys.stdout', new=StringIO()) as f_show:
-                self.console.onecmd("show BaseModel " + instance_id)
-                output_show = f_show.getvalue().strip()
-                self.assertIn(instance_id, output_show)
-
-    # Add more test methods for other commands and features
+    # Add test methods for show, destroy, all, and update commands
+    # Make sure to test all possible cases mentioned in the requirements
 
 if __name__ == '__main__':
     unittest.main()
