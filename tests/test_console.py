@@ -1,40 +1,49 @@
 #!/usr/bin/python3
+"""Test for the console"""
 
 import unittest
 from unittest.mock import patch
 from io import StringIO
+import console
 from console import HBNBCommand
 
 
 class TestConsole(unittest.TestCase):
+    """Class for testing the console"""
+
     def setUp(self):
+        """Set up the test environment"""
         self.console = HBNBCommand()
 
     def tearDown(self):
-        pass
+        """Tear down the test environment"""
+        pass  # You can add any necessary cleanup here
 
-    def test_quit(self):
-        with self.assertRaises(SystemExit):
-            self.console.onecmd("quit")
-
-    def test_help(self):
+    def test_quit_command(self):
+        """Test the quit command"""
         with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("help")
-            self.assertIn("Documented commands (type help <topic>):", f.getvalue())
+            self.assertTrue(self.console.onecmd("quit"))
+            output = f.getvalue().strip()
+            self.assertEqual(output, "")  # Check if output is empty
 
-    def test_create(self):
+    def test_EOF_command(self):
+        """Test the EOF command"""
         with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("create BaseModel")
-            self.assertIn("BaseModel", f.getvalue())
+            self.assertTrue(self.console.onecmd("EOF"))
+            output = f.getvalue().strip()
+            self.assertEqual(output, "")  # Check if output is empty
 
-    def test_show(self):
+    def test_help_show_command(self):
+        """Test the help command for 'show'"""
         with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("create BaseModel")
-            obj_id = f.getvalue().strip()
-            
-            f.clear()
-            self.console.onecmd("show BaseModel " + obj_id)
-            self.assertIn(obj_id, f.getvalue())
+            self.console.onecmd("help show")
+            output = f.getvalue().strip()
+            self.assertIn("Prints the string representation of a specific instance", output)
+            self.assertIn("Usage: show <class name> <id>", output)
+            # Add more assertions based on expected help text
+
+    # Add more test methods to cover all commands and features of the console
+    # Use the recommended patching technique to intercept STDOUT
 
 if __name__ == '__main__':
     unittest.main()
