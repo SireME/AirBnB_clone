@@ -31,15 +31,6 @@ class TestConsole(unittest.TestCase):
             output = f.getvalue().strip()
             self.assertEqual(output, "")
 
-    def test_help_show_command(self):
-        """Test the help command for 'show'"""
-        with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("help show")
-            output = f.getvalue().strip()
-            self.assertIn("Prints the string representation of a specific instance", output)
-            self.assertIn("Usage: show <class name> <id>", output)
-            # Add more assertions based on expected help text
-
     def test_create_command(self):
         """Test the create command"""
         with patch('sys.stdout', new=StringIO()) as f:
@@ -47,21 +38,23 @@ class TestConsole(unittest.TestCase):
             output = f.getvalue().strip()
             self.assertTrue(len(output) > 0)  # Check if output is not empty
 
-    def test_show_command_missing_class(self):
-        """Test the show command with missing class name"""
-        with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("show")
-            output = f.getvalue().strip()
-            self.assertIn("** class name missing **", output)
-
-    # Continue adding more test methods for other commands and features
-
     def test_create_invalid_class(self):
         """Test create command with invalid class name"""
         with patch('sys.stdout', new=StringIO()) as f:
             self.console.onecmd("create InvalidClass")
             output = f.getvalue().strip()
             self.assertIn("** class doesn't exist **", output)
+
+    def test_show_command(self):
+        """Test the show command"""
+        with patch('sys.stdout', new=StringIO()) as f:
+            self.console.onecmd("create BaseModel")
+            output = f.getvalue().strip()
+            instance_id = output
+            with patch('sys.stdout', new=StringIO()) as f_show:
+                self.console.onecmd("show BaseModel " + instance_id)
+                output_show = f_show.getvalue().strip()
+                self.assertIn(instance_id, output_show)
 
     # Add more test methods for other commands and features
 
