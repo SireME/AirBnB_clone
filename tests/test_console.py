@@ -4,7 +4,9 @@
 import unittest
 from unittest.mock import patch
 from io import StringIO
+import console
 from console import HBNBCommand
+
 
 class TestConsole(unittest.TestCase):
     """Class for testing the console"""
