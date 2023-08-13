@@ -6,6 +6,8 @@ from unittest.mock import patch
 from io import StringIO
 import console
 from console import HBNBCommand
+from models import storage
+from models.base_model import BaseModel
 
 
 class TestConsole(unittest.TestCase):
@@ -14,6 +16,8 @@ class TestConsole(unittest.TestCase):
     def setUp(self):
         """Set up the test environment"""
         self.console = HBNBCommand()
+        self.storage = storage
+        self.base = BaseModel()
 
     def tearDown(self):
         """Tear down the test environment"""
@@ -47,7 +51,14 @@ class TestConsole(unittest.TestCase):
             output = f.getvalue().strip()
             self.assertIn("** class doesn't exist **", output)
 
-    # Add test methods for show, destroy, all, and update commands
+    def test_show_command(self):
+        """Test the show command"""
+        with patch('sys.stdout', new=StringIO()) as f:
+            self.console.onecmd(f"show BaseModel {self.base.id}")
+            output = f.getvalue().strip()
+            self.assertTrue(len(output) > 0)  # Check if output is not empty
+
+    # Add test methods for destroy, all, and update commands
     # Make sure to test all possible cases mentioned in the requirements
 
 if __name__ == '__main__':
