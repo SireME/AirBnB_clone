@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module for testing the State class"""
+"""
+This Module is used to test for the efficacy of the
+State class
+"""
 import unittest
 import json
 import pep8
@@ -46,4 +49,3 @@ class TestState(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
