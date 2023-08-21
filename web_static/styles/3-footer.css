@@ -1,0 +1,19 @@
+/* Footer styles */
+footer {
+    background-color: #00FF00;
+    height: 60px;
+    width: 100%;
+    color: white;
+    border-top: 1px solid #CCCCCC;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

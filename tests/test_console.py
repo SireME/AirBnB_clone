@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/python3
+"""Defines unittests for console.py.
+Unittest classes:
+    TestHBNBCommand_prompting
+    TestHBNBCommand_help
+    TestHBNBCommand_exit
+    TestHBNBCommand_create
+    TestHBNBCommand_show
+    TestHBNBCommand_all
+    TestHBNBCommand_destroy
+    TestHBNBCommand_update
+"""
+
+import os
+import sys
+>>>>>>> 62f20a7bdcec8b33dbcfdcc301c32aac5face827
 import unittest
 import os
 from io import StringIO

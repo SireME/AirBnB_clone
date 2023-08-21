@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module for testing the User class"""
+"""
+   This Module is to ensure that the User class works
+   as expected
+"""
 import unittest
 import json
 import pep8
@@ -49,4 +52,3 @@ class TestUser(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

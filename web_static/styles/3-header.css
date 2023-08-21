@@ -1,0 +1,20 @@
+/* Header styles */
+header {
+    background-color: #FF0000;
+    height: 70px;
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.logo {
+    margin-left: 20px;
+}
+

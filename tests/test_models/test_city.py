@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module for testing the City class"""
+"""Module for testing the City class
+   ensuring functions run accordingly
+"""
 import unittest
 import json
 import pep8
@@ -47,4 +49,3 @@ class TestCity(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

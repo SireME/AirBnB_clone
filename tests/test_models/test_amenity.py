@@ -26,10 +26,10 @@ class TestAmenity(unittest.TestCase):
     def test_pep8_conformance_test_amenity(self):
         """Test PEP8 conformance for tests/test_models/test_amenity.py"""
         pep8style = pep8.StyleGuide(quiet=True)
-        files_to_check = ['tests/test_models/test_amenity.py']
+        fc = ['tests/test_models/test_amenity.py']
         res = pep8style.check_files(files_to_check)
-        self.assertEqual(res.total_errors, 0,
-                         "Detected code style errors (and warnings) in files: {}".format(files_to_check))
+        fcr = "Detected code style errors (and warnings) in files: {fc}"
+        self.assertEqual(res.total_errors, 0, fcr)
 
     def test_constructor_documentation(self):
         """Test constructor documentation"""
@@ -44,6 +44,6 @@ class TestAmenity(unittest.TestCase):
         with self.subTest(msg='Attributes'):
             self.assertIsInstance(Amenity.name, str)
 
+
 if __name__ == '__main__':
     unittest.main()
-

@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Module for testing the BaseModel class"""
+"""Module for testing the BaseModel class
+   for conformity
+"""
 import unittest
 import json
 import pep8
 import datetime
 from time import sleep
-
 from models.base_model import BaseModel
 
 
@@ -119,4 +120,3 @@ class TestBaseModel(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

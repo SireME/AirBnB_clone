@@ -1,0 +1,55 @@
+/* Places styles */
+/* ... (styles from the previous tasks) */
+
+.amenities {
+    margin-top: 40px;
+}
+
+.amenities h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.amenities ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.amenities li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.amenities li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+.reviews {
+    margin-top: 40px;
+}
+
+.reviews h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.reviews ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.reviews li {
+    margin-bottom: 20px;
+}
+
+.reviews h3 {
+    font-size: 14px;
+}
+
+.reviews p {
+    font-size: 12px;
+}
+
