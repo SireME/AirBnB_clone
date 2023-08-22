@@ -1,0 +1,6 @@
+/* Styling for the header */
+    header {
+	    background: red;
+	    height: 70px;
+	    width: 100%;
+    }
