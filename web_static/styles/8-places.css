@@ -42,11 +42,14 @@ div.information {
 	border-top: 1px solid #DDD;
 	border-bottom: 1px solid #DDD;
 	justify-content:center;
-	alighn-items: center;
 
 }
 .max_guest, .number_rooms, .number_bathrooms{
+	display:flex;
 	width: 100px;
+	justify-content:center;
+	align-items:flex-end;
+
 }
 
 /*set backgound images from guest to bathrooms*/
